@@ -1,39 +1,246 @@
-.App {
+#app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
-}
-
-.App-header {
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+#game-parent {
+  display: flex;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  padding: 50px 0px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
+#footer {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.back-home {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+}
+
+.flex-start-center {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.pl-60 {
+  padding-left: 60px;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.sol {
+  margin-top: 20;
+  padding-right: 40;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: pink;
+}
+
+.Header {
+  position: absolute;
+  top: 0;
+  background-color: blue;
+  width: 100%;
+  color: #fff;
+}
+
+div .selected {
+  background-color: rosybrown;
+}
+
+#solutions {
+  display: none;
+}
+
+button {
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  margin: 10px 0px 0px -10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.card,
+.cardSolution {
+  border: 1px solid #d6d6d6;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  display: inline-block;
+  height: 100px;
+  width: 120px;
+  text-align: center;
+  margin: 10px;
+  background-color: #fffbfb;
+}
+
+.cardImage {
+  width: 25px;
+  height: 50px;
+  background-size: 25px 50px;
+  margin: 5px;
+  margin-top: 25px;
+  display: inline-block;
+}
+
+.purpleCard {
+  -webkit-filter: hue-rotate(0deg);
+  -o-filter: hue-rotate(0deg);
+  -moz-filter: hue-rotate(0deg);
+  -ms-filter: hue-rotate(0deg);
+  filter: hue-rotate(0deg);
+}
+.redCard {
+  -webkit-filter: hue-rotate(63deg);
+  -o-filter: hue-rotate(63deg);
+  -moz-filter: hue-rotate(63deg);
+  -ms-filter: hue-rotate(63deg);
+  filter: hue-rotate(63deg);
+}
+.greenCard {
+  -webkit-filter: hue-rotate(216deg);
+  -o-filter: hue-rotate(216deg);
+  -moz-filter: hue-rotate(216deg);
+  -ms-filter: hue-rotate(216deg);
+  filter: hue-rotate(216deg);
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  /* background-color: pink; */
+  color: pink;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 10%;
+  top: 60%;
+  font-size: 24px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
-  50% {
-    transform: translateY(10px)
+  to {
+    bottom: 30px;
+    opacity: 1;
   }
-  100% {
-    transform: translateY(0px)
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
   }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+.clear-diamond {
+  background-image: url("./Images/diamond-empty.png");
+}
+.shaded-diamond {
+  background-image: url("./Images/diamond-stripe.png");
+}
+.solid-diamond {
+  background-image: url("./Images/diamond-solid.png");
+}
+.clear-squiggle {
+  background-image: url("./Images/squiggle-empty.png");
+}
+.shaded-squiggle {
+  background-image: url("./Images/squiggle-stripe.png");
+}
+.solid-squiggle {
+  background-image: url("./Images/squiggle-solid.png");
+}
+.clear-oval {
+  background-image: url("./Images/oval-empty.png");
+}
+.shaded-oval {
+  background-image: url("./Images/oval-stripe.png");
+}
+.solid-oval {
+  background-image: url("./Images/oval-solid.png");
+}
+
+.diamond {
+  background-image: url("./Images/diamond-empty.png");
+}
+.squiggle {
+  background-image: url("./Images/squiggle-empty.png");
+}
+.oval {
+  background-image: url("./Images/oval-empty.png");
 }
