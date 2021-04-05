@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/set_card_game/static/css/main.c874274e.chunk.css",
+    "main.js": "/set_card_game/static/js/main.a071236b.chunk.js",
+    "main.js.map": "/set_card_game/static/js/main.a071236b.chunk.js.map",
+    "runtime-main.js": "/set_card_game/static/js/runtime-main.0b3021c7.js",
+    "runtime-main.js.map": "/set_card_game/static/js/runtime-main.0b3021c7.js.map",
+    "static/js/2.6030be14.chunk.js": "/set_card_game/static/js/2.6030be14.chunk.js",
+    "static/js/2.6030be14.chunk.js.map": "/set_card_game/static/js/2.6030be14.chunk.js.map",
+    "index.html": "/set_card_game/index.html",
+    "static/css/main.c874274e.chunk.css.map": "/set_card_game/static/css/main.c874274e.chunk.css.map",
+    "static/js/2.6030be14.chunk.js.LICENSE.txt": "/set_card_game/static/js/2.6030be14.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/set_card_game/static/media/squiggle-solid.f40e3219.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b3021c7.js",
+    "static/js/2.6030be14.chunk.js",
+    "static/css/main.c874274e.chunk.css",
+    "static/js/main.a071236b.chunk.js"
+  ]
+}
